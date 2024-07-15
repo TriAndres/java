@@ -1,7 +1,9 @@
 package ru.practiicum;
 
+import ru.practiicum.lessonA.view.LessonMenuA;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        new LessonMenuA().game();
     }
 }

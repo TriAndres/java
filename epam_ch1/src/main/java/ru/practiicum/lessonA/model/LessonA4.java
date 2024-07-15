@@ -1,26 +1,28 @@
 package ru.practiicum.lessonA.model;
 
-import java.util.Scanner;
+import ru.practiicum.user.User;
 
-/*
-4. Ввести пароль из командной строки и сравнить его со строкой-образцом.
- */
+import static ru.practiicum.console.Console.getString;
+
 public class LessonA4 extends LessonA {
-    public static void main(String[] args) {
-        new LessonA4().game();
-    }
 
     @Override
     public void game() {
         System.out.println("4. Ввести пароль из командной строки и сравнить его со строкой-образцом.");
         while (true) {
+            user = new User();
+            user.setPassword("password");
             menu();
-            int name = input();
-            if (name < 1) {
+            String password = getString();
+            if (password.equals("0")) {
                 break;
             } else {
-                //
-                //
+                if (password.equals(user.getPassword())) {
+                    System.out.println("Ввели верно");
+                    break;
+                } else {
+                    System.out.println("Введите верный пароль");
+                }
             }
         }
         System.out.println("Вышли из программы");
@@ -29,23 +31,8 @@ public class LessonA4 extends LessonA {
     private void menu() {
         System.out.println("""
                 \nВведите:
-                - Введите пароль.
+                - Пароль.
                 - 0 (выход).
                 """);
-    }
-
-    private int input() {
-        int a = 0;
-        Scanner sc = new Scanner(System.in);
-        while (true) {
-            if (sc.hasNextInt()) {
-                System.out.println("цифра");
-                a = sc.nextInt();
-                break;
-            } else {
-                sc.nextLine();
-            }
-        }
-        return a;
     }
 }

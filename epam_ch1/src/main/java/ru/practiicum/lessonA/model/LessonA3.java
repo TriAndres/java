@@ -2,12 +2,8 @@ package ru.practiicum.lessonA.model;
 
 import ru.practiicum.number.Number;
 
-import java.util.Scanner;
+import static ru.practiicum.console.Console.getInteger;
 
-/*
-3. Вывести заданное количество случайных чисел с переходом и без перехода
-    на новую строку.
- */
 public class LessonA3 extends LessonA {
 
     @Override
@@ -16,7 +12,7 @@ public class LessonA3 extends LessonA {
                 "    на новую строку.");
         while (true) {
             menu();
-            int name = input();
+            int name = getInteger();
             if (name < 1) {
                 break;
             } else {
@@ -38,20 +34,5 @@ public class LessonA3 extends LessonA {
                 - Количество случайных чисел.
                 - 0 (выход).
                 """);
-    }
-
-    private int input() {
-        int a = 0;
-        Scanner sc = new Scanner(System.in);
-        while (true) {
-            if (sc.hasNextInt()) {
-                System.out.println("цифра");
-                a = sc.nextInt();
-                break;
-            } else {
-                sc.nextLine();
-            }
-        }
-        return a;
     }
 }

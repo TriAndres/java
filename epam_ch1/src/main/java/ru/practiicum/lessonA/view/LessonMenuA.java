@@ -24,8 +24,11 @@ public class LessonMenuA {
 
     private void menu() {
         System.out.println("""
-                Выбирите задачу:
+                Выбирите задачу варианта А:
                 1
+                2
+                3
+                4
                 0 (выход)
                 """);
     }
@@ -38,6 +41,8 @@ public class LessonMenuA {
         switch (name) {
             case "1" -> controller.lesson1();
             case "2" -> controller.lesson2();
+            case "3" -> controller.lesson3();
+            case "4" -> controller.lesson4();
         }
     }
 

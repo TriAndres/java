@@ -2,11 +2,8 @@ package ru.practiicum.lessonA.model;
 
 import ru.practiicum.user.User;
 
-import java.util.Scanner;
+import static ru.practiicum.console.Console.getString;
 
-/*
-1 Приветствовать любого пользователя при вводе его имени через командную строку
- */
 public class LessonA1 extends LessonA {
 
     @Override
@@ -14,7 +11,7 @@ public class LessonA1 extends LessonA {
         System.out.println("1 Приветствовать любого пользователя при вводе его имени через командную строку");
         while (true) {
             menu();
-            user = new User(input());
+            user = new User(getString());
             if (user.getName().equals("0")) {
                 break;
             } else {
@@ -31,9 +28,5 @@ public class LessonA1 extends LessonA {
                 - Ваше Имя.
                 - 0 (выход).
                 """);
-    }
-
-    private String input() {
-        return new Scanner(System.in).nextLine();
     }
 }
