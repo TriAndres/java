@@ -1,6 +1,6 @@
-package ru.practiicum.option.model.lessonA;
+package ru.practiicum.lessonA.model;
 
-import ru.practiicum.option.model.user.User;
+import ru.practiicum.user.User;
 
 import java.util.Scanner;
 

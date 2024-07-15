@@ -1,6 +1,4 @@
-package ru.practiicum.option.model.lessonA;
-
-import ru.practiicum.option.model.number.Number;
+package ru.practiicum.lessonA.model;
 
 import java.util.Scanner;
 

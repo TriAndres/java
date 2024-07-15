@@ -1,4 +1,4 @@
-package ru.practiicum.option.model.number;
+package ru.practiicum.number;
 
 import java.util.Random;
 

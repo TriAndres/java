@@ -1,4 +1,4 @@
-package ru.practiicum.option.model.lessonA;
+package ru.practiicum.lessonA.model;
 
 import java.util.Scanner;
 

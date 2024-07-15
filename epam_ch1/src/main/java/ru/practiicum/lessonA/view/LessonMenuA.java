@@ -1,6 +1,6 @@
-package ru.practiicum.option.view.menu;
+package ru.practiicum.lessonA.view;
 
-import ru.practiicum.option.controller.LessonControllerA;
+import ru.practiicum.lessonA.controller.LessonControllerA;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package ru.practiicum.option.controller;
+package ru.practiicum.lessonA.controller;
 
-import ru.practiicum.option.model.lessonA.LessonA1;
+import ru.practiicum.lessonA.model.LessonA1;
 
 public class LessonControllerA {
 

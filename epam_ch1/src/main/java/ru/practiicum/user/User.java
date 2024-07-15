@@ -1,4 +1,4 @@
-package ru.practiicum.option.model.user;
+package ru.practiicum.user;
 
 public class User {
     private String name;
