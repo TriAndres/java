@@ -12,9 +12,17 @@ public class LessonControllerA {
         new LessonA2().game();
     }
     public void lesson3() {
-        new LessonA1().game();
+        new LessonA3().game();
     }
     public void lesson4() {
         new LessonA4().game();
+    }
+
+    public void lesson5() {
+        new LessonA5().game();
+    }
+
+    public void lesson6() {
+        new LessonA6().game();
     }
 }

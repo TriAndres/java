@@ -1,9 +1,15 @@
 package ru.practiicum.user;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class User {
     private String name;
+    private String lastName;
     private String password;
     private String argument;
+    private LocalDateTime localDateTime = LocalDateTime.now();
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
     public User(String name) {
         this.name = name;
@@ -20,6 +26,14 @@ public class User {
         this.name = name;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -34,5 +48,16 @@ public class User {
 
     public void setArgument(String argument) {
         this.argument = argument;
+    }
+
+    public String getLocalDateTime() {
+        return localDateTime.format(formatter);
+
+    }
+
+    public String getLocalDateTimePlusDay(int day) {
+        localDateTime = localDateTime.plusDays(day);
+        return localDateTime.format(formatter);
+
     }
 }

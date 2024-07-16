@@ -29,6 +29,8 @@ public class LessonMenuA {
                 2
                 3
                 4
+                5
+                6
                 0 (выход)
                 """);
     }
@@ -43,6 +45,8 @@ public class LessonMenuA {
             case "2" -> controller.lesson2();
             case "3" -> controller.lesson3();
             case "4" -> controller.lesson4();
+            case "5" -> controller.lesson5();
+            case "6" -> controller.lesson6();
         }
     }
 
