@@ -1,6 +1,6 @@
 package ru.practiicum.lessonA.model;
 
-import ru.practiicum.number.Number;
+import ru.practiicum.number.ManageNumber;
 
 import static ru.practiicum.console.Console.getInteger;
 
@@ -16,9 +16,8 @@ public class LessonA3 extends LessonA {
             if (name < 1) {
                 break;
             } else {
-                number = new Number(name);
-                number.init();
-                number.setNumRandom();
+                number = new ManageNumber();
+                number.setNumRandom(name,1,100);
                 System.out.println("С переходом:");
                 number.show(1);
                 System.out.println("\nБез перехода:");
@@ -27,8 +26,8 @@ public class LessonA3 extends LessonA {
         }
         System.out.println("Вышли из программы");
     }
-
-    private void menu() {
+    @Override
+    public void menu() {
         System.out.println("""
                 \nВведите:
                 - Количество случайных чисел.

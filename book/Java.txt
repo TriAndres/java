@@ -1,6 +1,6 @@
 
 Java_EPAM_556      -
 
-PostgreSQL_337     - 
+PostgreSQL_337     - 30
 
 Spring_bystro_448  - 41

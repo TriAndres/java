@@ -30,8 +30,8 @@ public class LessonA6 extends LessonA {
         }
         System.out.println("Вышли из программы");
     }
-
-    private void menu() {
+    @Override
+    public void menu() {
         System.out.println("""
                 Введите:
                 - Фамилию

@@ -27,8 +27,8 @@ public class LessonA4 extends LessonA {
         }
         System.out.println("Вышли из программы");
     }
-
-    private void menu() {
+    @Override
+    public void menu() {
         System.out.println("""
                 \nВведите:
                 - Пароль.

@@ -2,7 +2,7 @@ package ru.practiicum.lessonA.view;
 
 import ru.practiicum.lessonA.controller.LessonControllerA;
 
-import java.util.Scanner;
+import static ru.practiicum.console.Console.getString;
 
 public class LessonMenuA {
     private final LessonControllerA controller;
@@ -14,7 +14,7 @@ public class LessonMenuA {
     public void game() {
         while (true) {
             menu();
-            String name = input();
+            String name = getString();
             if (name.equals("0")) {
                 break;
             }
@@ -24,19 +24,15 @@ public class LessonMenuA {
 
     private void menu() {
         System.out.println("""
-                Выбирите задачу варианта А:
-                1
-                2
-                3
-                4
-                5
-                6
-                0 (выход)
+                \tВыбирите задачу варианта А:
+                \t1
+                \t2
+                \t3
+                \t4
+                \t5
+                \t6
+                \t0 (выход)
                 """);
-    }
-
-    private String input() {
-        return new Scanner(System.in).nextLine();
     }
 
     private void select(String name) {
@@ -49,5 +45,4 @@ public class LessonMenuA {
             case "6" -> controller.lesson6();
         }
     }
-
 }

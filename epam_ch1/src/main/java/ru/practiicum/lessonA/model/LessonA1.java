@@ -17,12 +17,11 @@ public class LessonA1 extends LessonA {
             } else {
                 System.out.println(user.getName() + ", вас приветствую!");
             }
-
         }
         System.out.println("Вышли из программы");
     }
-
-    private void menu() {
+    @Override
+    public void menu() {
         System.out.println("""
                 Введите:
                 - Ваше Имя.
