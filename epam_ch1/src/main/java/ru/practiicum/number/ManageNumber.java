@@ -22,12 +22,24 @@ public class ManageNumber {
         }
     }
 
-    public void show(int length) {
+    public void show(int lineLength) {
         int count = 0;
         for (Number number : numberList) {
             System.out.print(number.getValue() + " ");
             count++;
-            if (count == length) {
+            if (count == lineLength) {
+                System.out.println();
+                count = 0;
+            }
+        }
+    }
+
+    public void show(int lineLength, List<Number> numberList) {
+        int count = 0;
+        for (Number number : numberList) {
+            System.out.print(number.getValue() + " ");
+            count++;
+            if (count == lineLength) {
                 System.out.println();
                 count = 0;
             }
