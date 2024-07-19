@@ -16,6 +16,7 @@ public class LessonB3 extends LessonB {
         numAllShow(20, 1, 100, 5);
         System.out.println("Числа, делятся на 3 или на 9: ");
         number.show(10, getNumberList());
+        number.getNumberList().clear();
     }
 
     public List<Number> getNumberList() {

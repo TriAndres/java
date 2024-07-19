@@ -19,6 +19,7 @@ public class LessonB1 extends LessonB {
         evenNumbers();
         System.out.println("\nНечетные числа:");
         notEvenNumbers();
+        number.getNumberList().clear();
     }
 
     public void  evenNumbers() {

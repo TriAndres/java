@@ -16,6 +16,7 @@ public class LessonB4 extends LessonB {
         numAllShow(20, 1, 100, 5);
         System.out.println("Числа, делятся на 5 и на 7: ");
         number.show(10, getNumberList());
+        number.getNumberList().clear();
     }
 
     public List<Number> getNumberList() {

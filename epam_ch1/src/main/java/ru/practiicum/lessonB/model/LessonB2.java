@@ -13,6 +13,7 @@ public class LessonB2 extends LessonB {
         numAllShow(20, 1, 100, 5);
         System.out.println("Наибольшее число: " + max());
         System.out.println("Наименьшее число: " + min());
+        number.getNumberList().clear();
     }
 
     public Integer max() {
