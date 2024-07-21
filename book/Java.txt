@@ -1,4 +1,0 @@
-
-Java_EPAM_556      -
-
-PostgreSQL_337     - 30
