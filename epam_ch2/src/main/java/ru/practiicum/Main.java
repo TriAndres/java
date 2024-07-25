@@ -1,7 +1,9 @@
 package ru.practiicum;
 
+import ru.practiicum.veiw.MenuImpl;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        new MenuImpl().game();
     }
 }

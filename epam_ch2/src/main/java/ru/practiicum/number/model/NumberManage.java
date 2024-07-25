@@ -5,40 +5,58 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class ManageNumber {
+public class NumberManage implements Manager {
     private final Map<Integer, Number> numberMap = new HashMap<>();
     private static int id;
 
-    private int getId() {
+    @Override
+    public int getId() {
         return ++id;
     }
 
-    public Collection<Number> getNumbers() {
+    @Override
+    public Collection<Number> getListNumbers() {
         return numberMap.values();
     }
 
+    @Override
     public void save(Number number) {
         number.setId(getId());
         numberMap.put(number.getId(), number);
     }
 
+    @Override
     public void update(Number number) {
-        if (number.getId() <= numberMap.size() && number.getId() > 0) {
+        int max = numberMap.values().stream().map(i -> i.getNum()).max(Integer::compare).get();
+        if (number.getId() >= 1 && number.getId() <= max) {
+            System.out.println("обновлён.");
             numberMap.put(number.getId(), number);
+        } else {
+            System.out.println("с таким id цифры нет");
         }
     }
 
+    @Override
     public Number getById(int id) {
         if (numberMap.containsKey(id)) {
             return numberMap.get(id);
         }
-        return  null;
+        return null;
     }
 
+    @Override
     public void deleteById(int id) {
-        numberMap.remove(id);
+        if (numberMap.containsKey(id)) {
+            numberMap.remove(id);
+        }
     }
 
+    @Override
+    public void clear() {
+        numberMap.clear();
+    }
+
+    @Override
     public void setListNumRandom(int size, int from, int to) {
         if (from < to) {
             for (int i = 1; i <= size; i++) {
