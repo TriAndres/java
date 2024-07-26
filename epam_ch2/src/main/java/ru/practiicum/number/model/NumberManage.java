@@ -1,9 +1,6 @@
 package ru.practiicum.number.model;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class NumberManage implements Manager {
     private final Map<Integer, Number> numberMap = new HashMap<>();
@@ -15,8 +12,8 @@ public class NumberManage implements Manager {
     }
 
     @Override
-    public Collection<Number> getListNumbers() {
-        return numberMap.values();
+    public List<Number> getListNumbers() {
+        return new ArrayList<>(numberMap.values());
     }
 
     @Override

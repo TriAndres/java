@@ -4,7 +4,7 @@ import ru.practiicum.number.controller.NumberController;
 
 import static ru.practiicum.console.Console.getIntegerFromTo;
 
-public class NumberMenu implements Menu {
+public class NumberMenu implements MenuN {
     private final NumberController controller;
 
     public NumberMenu(NumberController controller) {
