@@ -17,6 +17,7 @@ public class NumberMenu implements MenuN {
             menu();
             int select = getIntegerFromTo(1);
             if (select == 8) {
+                System.out.println("Выход из меню цифр.");
                 break;
             }
             select(select);

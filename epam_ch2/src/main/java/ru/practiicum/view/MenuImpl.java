@@ -30,6 +30,7 @@ public class MenuImpl implements MenuM {
             menu();
             int select = getIntegerFromTo(1);
             if (select == 6) {
+                System.out.println("Выход из программы.");
                 break;
             }
             select(select);

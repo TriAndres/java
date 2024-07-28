@@ -20,6 +20,7 @@ public class LessonAMenu implements MenuA {
             menu();
             int select = getIntegerFromTo(1);
             if (select == 10) {
+                System.out.println("Выход из меню задач А.");
                 break;
             }
             select(select);
@@ -47,10 +48,10 @@ public class LessonAMenu implements MenuA {
     public void select(int select) {
         switch (select) {
             case 1 -> controller.lesson1();
-            case 2 -> controller.lesson1();
-            case 3 -> controller.lesson1();
-            case 4 -> controller.lesson1();
-            case 5 -> controller.lesson1();
+            case 2 -> controller.lesson2();
+            case 3 -> controller.lesson3();
+            case 4 -> controller.lesson4();
+            case 5 -> controller.lesson5();
             case 6 -> controller.lesson6();
             case 7 -> controller.lesson7();
             case 8 -> controller.lesson8();

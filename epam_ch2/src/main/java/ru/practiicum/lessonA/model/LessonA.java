@@ -18,13 +18,21 @@ public abstract class LessonA {
         int count = 0;
         for (Number number : list) {
             switch (s) {
-                case "1" -> System.out.print(number.getId() + "-" + number.getNum() + " ");
+                case "0" -> System.out.print(number.getId() + "-" + number.getNum() + " ");
+                case "2" -> System.out.print(number.getNum() + "-" + number.getLength() + " ");
             }
             ++count;
             if (count == length) {
                 System.out.println();
                 count = 0;
             }
+        }
+        System.out.println();
+    }
+
+    public void setNumLength() {
+        for (Number n : numberManage.getListNumbers()) {
+            n.setLength(String.valueOf(n.getNum()).length());
         }
     }
 }

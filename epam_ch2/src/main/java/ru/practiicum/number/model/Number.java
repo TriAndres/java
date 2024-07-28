@@ -3,6 +3,7 @@ package ru.practiicum.number.model;
 public class Number {
     private int id;
     private int num;
+    private int length;
 
     public Number(int id, int num) {
         this.id = id;
@@ -30,5 +31,13 @@ public class Number {
 
     public void setNum(int num) {
         this.num = num;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
     }
 }
