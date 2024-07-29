@@ -19,7 +19,7 @@ public abstract class LessonA {
         for (Number number : list) {
             switch (s) {
                 case "0" -> System.out.print(number.getId() + "-" + number.getNum() + " ");
-                case "2" -> System.out.print(number.getNum() + "-" + number.getLength() + " ");
+                case "1" -> System.out.print(number.getNum() + "-" + number.getLength() + " ");
             }
             ++count;
             if (count == length) {

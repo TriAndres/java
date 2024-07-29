@@ -19,10 +19,10 @@ public class LessonA2 extends LessonA{
         setNumLength();
 
         System.out.println("Числа в порядке возрастания: num-length");
-        showNum("2",10,numAscending(numberManage.getListNumbers()));
+        showNum("1",10,numAscending(numberManage.getListNumbers()));
 
         System.out.println("Числа в порядке убывания: num-length");
-        showNum("2",10,numDecreasing(numberManage.getListNumbers()));
+        showNum("1",10,numDecreasing(numberManage.getListNumbers()));
 
         numberManage.getListNumbers().clear();
     }
