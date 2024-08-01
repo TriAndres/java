@@ -4,6 +4,7 @@ public class Number {
     private int id;
     private int num;
     private int length;
+    private int differentNum; //различных цифр
 
     public Number(int id, int num) {
         this.id = id;
@@ -39,5 +40,13 @@ public class Number {
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    public int getDifferentNum() {
+        return differentNum;
+    }
+
+    public void setDifferentNum(int differentNum) {
+        this.differentNum = differentNum;
     }
 }

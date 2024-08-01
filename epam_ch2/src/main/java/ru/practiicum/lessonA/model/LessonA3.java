@@ -27,6 +27,7 @@ public class LessonA3 extends LessonA {
         System.out.println("Числа, длина которых больше средней: num-length");
         showNum("1", 10, numMoreAverage());
 
+        numberManage.getListNumbers().clear();
     }
 
     private int getAverage() {
