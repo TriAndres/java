@@ -10,13 +10,12 @@ public class LessonA3 extends LessonA {
         super(numberManage);
     }
 
-    @Override
+
     public void game() {
         System.out.println("3. Вывести на консоль те числа, длина которых меньше (больше) средней,\n" +
                 "а также длину.");
         System.out.println("Ввод: id-num");
         showNum("0", 10, numberManage.getListNumbers());
-        setNumLength();
 
         System.out.println("Среднее: " + getAverage());
 

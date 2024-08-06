@@ -11,7 +11,7 @@ public class LessonA5 extends LessonA{
         super(numberManage);
     }
 
-    @Override
+
     public void game() {
         System.out.println("5. Найти количество чисел, содержащих только четные цифры, а среди них —\n" +
                 "количество чисел с равным числом четных и нечетных цифр.");

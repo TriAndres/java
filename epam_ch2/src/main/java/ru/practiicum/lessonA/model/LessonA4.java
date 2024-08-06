@@ -12,22 +12,21 @@ public class LessonA4 extends LessonA {
         super(numberManage);
     }
 
-    @Override
+
     public void game() {
         System.out.println("4. Найти число, в котором число различных цифр минимально. Если таких\n" +
                 "чисел несколько, найти первое из них.");
-        numberManage.setListNumRandom(20, 1000, 9999);
         System.out.println("Ввод: id-num");
         showNum("0", 10, numberManage.getListNumbers());
 
-        differentNum(numberManage.getListNumbers());
+        //differentNum(numberManage.getListNumbers());
 
         show(0, differentNumSort(numberManage.getListNumbers()));
     }
 
-    private void differentNum(List<Number> numberList) {
+    public void differentNum() {
         Map<Integer, Integer> map = new HashMap<>();
-        for (Number n : numberList) {
+        for (Number n : numberManage.getListNumbers()) {
             String[] a = String.valueOf(n.getNum()).split("");
             for (int i = 0; i < a.length; i++) {
                 if (!map.containsKey(Integer.parseInt(a[i]))) {

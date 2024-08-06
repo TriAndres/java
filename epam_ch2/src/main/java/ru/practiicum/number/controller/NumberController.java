@@ -1,5 +1,6 @@
 package ru.practiicum.number.controller;
 
+import ru.practiicum.file.File;
 import ru.practiicum.number.model.Number;
 import ru.practiicum.number.model.NumberManage;
 
@@ -8,9 +9,16 @@ import static ru.practiicum.console.Console.getIntegerFromTo;
 
 public class NumberController implements Controller {
     private final NumberManage manageNumber;
+    private File f;
+    private String nameFile = "";
 
     public NumberController(NumberManage manageNumber) {
         this.manageNumber = manageNumber;
+        f = new File();
+    }
+
+    public void getInitFile() {
+        f.getFile(nameFile);
     }
 
     @Override
@@ -22,15 +30,13 @@ public class NumberController implements Controller {
         } else {
             System.out.println("Список пуст");
         }
-
-
-
     }
 
     @Override
     public void save() {
         System.out.println("Введите цифру:");
         manageNumber.save(new Number(getInteger()));
+        f.setFile(nameFile,manageNumber.getListNumbers());
         System.out.println("Записана цифра в список.");
     }
 

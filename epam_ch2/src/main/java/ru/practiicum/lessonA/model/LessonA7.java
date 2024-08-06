@@ -7,7 +7,7 @@ public class LessonA7 extends LessonA{
         super(numberManage);
     }
 
-    @Override
+
     public void game() {
         System.out.println("7. Найти число, состоящее только из различных цифр. Если таких чисел не\n" +
                 "сколько, найти первое из них.");

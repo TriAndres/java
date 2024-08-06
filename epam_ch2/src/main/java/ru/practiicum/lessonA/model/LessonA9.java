@@ -7,7 +7,7 @@ public class LessonA9 extends LessonA{
         super(numberManage);
     }
 
-    @Override
+
     public void game() {
         System.out.println("9. Найти корни квадратного уравнения. Параметры уравнения передавать\n" +
                 "с командной строкой.");

@@ -10,13 +10,12 @@ public class LessonA2 extends LessonA{
         super(numberManage);
     }
 
-    @Override
+
     public void game() {
         System.out.println("2. Упорядочить и вывести числа в порядке возрастания (убывания) значений\n" +
                 "их длины.");
         System.out.println("Ввод: id-num");
         showNum("0",10, numberManage.getListNumbers());
-        setNumLength();
 
         System.out.println("Числа в порядке возрастания: num-length");
         showNum("1",10,numAscending(numberManage.getListNumbers()));
@@ -27,7 +26,7 @@ public class LessonA2 extends LessonA{
         numberManage.getListNumbers().clear();
     }
 
-    private List<Number> numAscending(List<Number> list) {
+    public List<Number> numAscending(List<Number> list) {
         return list.stream().sorted((a, b) -> a.getNum() - b.getNum()).toList();
     }
 

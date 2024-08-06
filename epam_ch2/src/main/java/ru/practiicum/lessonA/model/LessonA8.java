@@ -7,7 +7,7 @@ public class LessonA8 extends LessonA{
         super(numberManage);
     }
 
-    @Override
+
     public void game() {
         System.out.println("8. Среди чисел найти число-палиндром. Если таких чисел больше одного,\n" +
                 "найти второе.");

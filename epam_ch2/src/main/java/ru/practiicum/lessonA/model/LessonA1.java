@@ -10,23 +10,15 @@ public class LessonA1 extends LessonA{
         super(numberManage);
     }
 
-    @Override
-    public void game() {
-        System.out.println("1. Найти самое короткое и самое длинное число. Вывести найденные числа\n" +
-                "и их длину.");
-        System.out.println("Ввод: id-num");
-        showNum("0",10, numberManage.getListNumbers());
-        setNumLength();
 
-        List<Number> num = numAscending(numberManage.getListNumbers());
-        System.out.println("Число самое короткое: num-length\n" + num.get(1).getNum() + "-" + num.get(1).getLength());
 
-        System.out.println("Число самое длинное: num-length\n" + num.get(num.size()-1).getNum() + "-" + num.get(num.size()-1).getLength());
-
-        numberManage.getListNumbers().clear();
+    public void setNumLength(List<Number> list) {
+        for (Number n : list) {
+            n.setLength(String.valueOf(n.getNum()).length());
+        }
     }
 
-    private List<Number> numAscending(List<Number> list) {
+    public List<Number> numAscending(List<Number> list) {
         return list.stream().sorted((a, b) -> a.getNum() - b.getNum()).toList();
     }
 }

@@ -1,52 +1,59 @@
 package ru.practiicum.number.model;
 
 public class Number {
-    private int id;
-    private int num;
-    private int length;
-    private int differentNum; //различных цифр
-
-    public Number(int id, int num) {
-        this.id = id;
-        this.num = num;
-    }
-
-    public Number(int num) {
-        this.num = num;
-    }
+    private Integer id;
+    private Integer num;
+    private Integer length;
+    private Integer differentNum; //различных цифр
 
     public Number() {
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getNum() {
-        return num;
-    }
-
-    public void setNum(int num) {
+    public Number(Integer num) {
         this.num = num;
     }
 
-    public int getLength() {
+    public Number(Integer id, Integer num) {
+        this.id = id;
+        this.num = num;
+    }
+
+    public Number(Integer id, Integer num, Integer length, Integer differentNum) {
+        this.id = id;
+        this.num = num;
+        this.length = length;
+        this.differentNum = differentNum;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
+    }
+
+    public Integer getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(Integer length) {
         this.length = length;
     }
 
-    public int getDifferentNum() {
+    public Integer getDifferentNum() {
         return differentNum;
     }
 
-    public void setDifferentNum(int differentNum) {
+    public void setDifferentNum(Integer differentNum) {
         this.differentNum = differentNum;
     }
 }

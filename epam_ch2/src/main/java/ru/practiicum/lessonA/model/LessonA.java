@@ -12,8 +12,6 @@ public abstract class LessonA {
         this.numberManage = numberManage;
     }
 
-    public abstract void game();
-
     public void showNum(String s,int length, List<Number> list) {
         int count = 0;
         for (Number number : list) {
@@ -30,9 +28,12 @@ public abstract class LessonA {
         System.out.println();
     }
 
-    public void setNumLength() {
-        for (Number n : numberManage.getListNumbers()) {
-            n.setLength(String.valueOf(n.getNum()).length());
-        }
-    }
+    public  void setNumLength(List<Number> list){
+
+    };
+    public List<Number> numAscending(List<Number> list) {
+        return null;
+    };
+
+
 }
