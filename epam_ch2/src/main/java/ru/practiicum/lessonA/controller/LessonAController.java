@@ -82,7 +82,6 @@ public class LessonAController {
     public void lesson5() {
         System.out.println("5. Найти количество чисел, содержащих только четные цифры, а среди них —\n" +
                 "количество чисел с равным числом четных и нечетных цифр.");
-        numberManage.setListNumRandom(20, 1000, 9999);
         System.out.println("Ввод: id-num");
         lessonA.showNum("0", 10, numberManage.getListNumbers());
 
