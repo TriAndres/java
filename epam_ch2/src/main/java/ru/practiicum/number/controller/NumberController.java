@@ -1,24 +1,37 @@
 package ru.practiicum.number.controller;
 
 import ru.practiicum.file.File;
+import ru.practiicum.lessonA.model.LessonA;
 import ru.practiicum.number.model.Number;
 import ru.practiicum.number.model.NumberManage;
+
+import java.util.ArrayList;
 
 import static ru.practiicum.console.Console.getInteger;
 import static ru.practiicum.console.Console.getIntegerFromTo;
 
 public class NumberController implements Controller {
     private final NumberManage manageNumber;
-    private File f;
-    private String nameFile = "";
+    private final File f;
+    private final String nameFile = "src\\main\\java\\ru\\practiicum\\file\\NumberFile.txt";
+    private final LessonA lessonA;
 
     public NumberController(NumberManage manageNumber) {
         this.manageNumber = manageNumber;
         f = new File();
+        lessonA = new LessonA();
     }
-
-    public void getInitFile() {
-        f.getFile(nameFile);
+    @Override
+    public void getInitNum() {
+        if (!f.getFile(nameFile).isEmpty()) {
+            for (Number number : f.getFile(nameFile)) {
+                manageNumber.save(number);
+            }
+            lessonA.setNumLength(manageNumber.getListNumbers());
+            lessonA.differentNum(manageNumber.getListNumbers());
+        } else {
+            new ArrayList<>();
+        }
     }
 
     @Override
@@ -36,8 +49,10 @@ public class NumberController implements Controller {
     public void save() {
         System.out.println("Введите цифру:");
         manageNumber.save(new Number(getInteger()));
-        f.setFile(nameFile,manageNumber.getListNumbers());
         System.out.println("Записана цифра в список.");
+        f.setFile(nameFile,manageNumber.getListNumbers());
+        lessonA.setNumLength(manageNumber.getListNumbers());
+        lessonA.differentNum(manageNumber.getListNumbers());
     }
 
     @Override
@@ -48,6 +63,9 @@ public class NumberController implements Controller {
         int num = getInteger();
         manageNumber.update(new Number(id, num));
         System.out.println("Обновлена цифра в списке");
+        f.setFile(nameFile,manageNumber.getListNumbers());
+        lessonA.setNumLength(manageNumber.getListNumbers());
+        lessonA.differentNum(manageNumber.getListNumbers());
     }
 
     @Override
@@ -80,5 +98,8 @@ public class NumberController implements Controller {
         int to = getIntegerFromTo(from);
         manageNumber.setListNumRandom(size, from, to);
         System.out.println("Записан массив цифр");
+        f.setFile(nameFile,manageNumber.getListNumbers());
+        lessonA.setNumLength(manageNumber.getListNumbers());
+        lessonA.differentNum(manageNumber.getListNumbers());
     }
 }

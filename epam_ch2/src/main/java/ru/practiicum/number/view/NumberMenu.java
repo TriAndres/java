@@ -15,8 +15,8 @@ public class NumberMenu implements MenuN {
     public void game() {
         while (true) {
             menu();
-            int select = getIntegerFromTo(1);
-            if (select == 8) {
+            int select = getIntegerFromTo(0);
+            if (select == 0) {
                 System.out.println("Выход из меню цифр.");
                 break;
             }
@@ -35,7 +35,7 @@ public class NumberMenu implements MenuN {
                 \t5-удалить весь список.
                 \t6-вывести весь список цифр.
                 \t7-записать рандом список цифр.
-                \t8-выход из меню.
+                \t0-выход из меню.
                 """);
     }
 

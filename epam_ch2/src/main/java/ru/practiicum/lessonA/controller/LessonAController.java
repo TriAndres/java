@@ -11,11 +11,13 @@ public class LessonAController {
     private final NumberManage numberManage;
     private File f;
     LessonA lessonA;
+    NumberSort numberSort;
 
     public LessonAController(NumberManage numberManage) {
         this.numberManage = numberManage;
         f = new File();
-        lessonA = new LessonA1(this.numberManage);
+        lessonA = new LessonA();
+        numberSort = new NumberSort();
     }
 
 
@@ -25,9 +27,9 @@ public class LessonAController {
 
         System.out.println("Ввод: id-num");
         lessonA.showNum("0",10, numberManage.getListNumbers());
-        lessonA.setNumLength(numberManage.getListNumbers());
 
-        List<Number> num = lessonA.numAscending(numberManage.getListNumbers());
+        List<Number> num = numberSort.sortNumAscending(numberManage.getListNumbers());
+
         System.out.println("Число самое короткое: num-length\n" + num.getFirst().getNum() + "-" + num.getFirst().getLength());
 
         System.out.println("Число самое длинное: num-length\n" + num.getLast().getNum() + "-" + num.getLast().getLength());
@@ -36,34 +38,86 @@ public class LessonAController {
     }
 
     public void lesson2() {
-        new LessonA2(numberManage).game();
+        System.out.println("2. Упорядочить и вывести числа в порядке возрастания (убывания) значений\n" +
+                "их длины.");
+        System.out.println("Ввод: id-num");
+        lessonA.showNum("0",10, numberManage.getListNumbers());
+
+        System.out.println("Числа в порядке возрастания: num-length");
+        lessonA.showNum("1",10,numberSort.sortNumAscending(numberManage.getListNumbers()));
+
+        System.out.println("Числа в порядке убывания: num-length");
+        lessonA.showNum("1",10,numberSort.sortNumDecreasing(numberManage.getListNumbers()));
+
+        numberManage.getListNumbers().clear();
     }
 
     public void lesson3() {
-        new LessonA3(numberManage).game();
+        System.out.println("3. Вывести на консоль те числа, длина которых меньше (больше) средней,\n" +
+                "а также длину.");
+        System.out.println("Ввод: id-num");
+        lessonA.showNum("0", 10, numberManage.getListNumbers());
+
+        System.out.println("Среднее: " + lessonA.getAverage(numberManage.getListNumbers()));
+
+        System.out.println("Числа, длина которых меньше средней: num-length");
+        lessonA.showNum("1", 10, lessonA.numMinAverage(numberManage.getListNumbers()));
+
+
+        System.out.println("Числа, длина которых больше средней: num-length");
+        lessonA.showNum("1", 10, lessonA.numMaxAverage(numberManage.getListNumbers()));
+
+        numberManage.getListNumbers().clear();
     }
 
     public void lesson4() {
-        new LessonA4(numberManage).game();
+        System.out.println("4. Найти число, в котором число различных цифр минимально. Если таких\n" +
+                "чисел несколько, найти первое из них.");
+        System.out.println("Ввод: id-num");
+        lessonA.showNum("0", 10, numberManage.getListNumbers());
+
+        lessonA.showDifferentNum(0, numberSort.sortDifferentAscending(numberManage.getListNumbers()));
     }
 
     public void lesson5() {
-        new LessonA5(numberManage).game();
+        System.out.println("5. Найти количество чисел, содержащих только четные цифры, а среди них —\n" +
+                "количество чисел с равным числом четных и нечетных цифр.");
+        numberManage.setListNumRandom(20, 1000, 9999);
+        System.out.println("Ввод: id-num");
+        lessonA.showNum("0", 10, numberManage.getListNumbers());
+
+        System.out.println("Вывод: id-num");
+        lessonA.showNum("0", 10, lessonA.numLessonA5(numberManage.getListNumbers()));
     }
 
     public void lesson6() {
-        new LessonA6(numberManage).game();
+        System.out.println("6. Найти число, цифры в котором идут в строгом порядке возрастания. Если\n" +
+                "таких чисел несколько, найти первое из них.");
+        System.out.println("Ввод: id-num");
+        lessonA.showNum("0",10, numberManage.getListNumbers());
+
+        System.out.println("Вывод: id-num");
+        lessonA.showNum("0", 10, lessonA.numLessonA6(numberManage.getListNumbers()));
     }
 
     public void lesson7() {
-        new LessonA7(numberManage).game();
+        System.out.println("7. Найти число, состоящее только из различных цифр. Если таких чисел не\n" +
+                "сколько, найти первое из них.");
+        System.out.println("Ввод:");
+        lessonA.showNum("1",10, numberManage.getListNumbers());
     }
 
     public void lesson8() {
-        new LessonA8(numberManage).game();
+        System.out.println("8. Среди чисел найти число-палиндром. Если таких чисел больше одного,\n" +
+                "найти второе.");
+        System.out.println("Ввод:");
+        lessonA.showNum("1",10, numberManage.getListNumbers());
     }
 
     public void lesson9() {
-        new LessonA9(numberManage).game();
+        System.out.println("9. Найти корни квадратного уравнения. Параметры уравнения передавать\n" +
+                "с командной строкой.");
+        System.out.println("Ввод:");
+        lessonA.showNum("1",10, numberManage.getListNumbers());
     }
 }

@@ -18,12 +18,12 @@ public class Number {
         this.num = num;
     }
 
-    public Number(Integer id, Integer num, Integer length, Integer differentNum) {
-        this.id = id;
-        this.num = num;
-        this.length = length;
-        this.differentNum = differentNum;
-    }
+//    public Number(Integer id, Integer num, Integer length, Integer differentNum) {
+//        this.id = id;
+//        this.num = num;
+//        this.length = length;
+//        this.differentNum = differentNum;
+//    }
 
     public Integer getId() {
         return id;

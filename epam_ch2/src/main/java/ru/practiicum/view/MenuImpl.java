@@ -26,10 +26,11 @@ public class MenuImpl implements MenuM {
 
     @Override
     public void game() {
+        numberController.getInitNum();
         while (true) {
             menu();
-            int select = getIntegerFromTo(1);
-            if (select == 6) {
+            int select = getIntegerFromTo(0);
+            if (select == 0) {
                 System.out.println("Выход из программы.");
                 break;
             }
@@ -43,7 +44,7 @@ public class MenuImpl implements MenuM {
                 \tВведите действие:
                 \t1-меню цифр.
                 \t2-меню задач А
-                \t6-выход из меню.
+                \t0-выход из меню.
                 """);
     }
 

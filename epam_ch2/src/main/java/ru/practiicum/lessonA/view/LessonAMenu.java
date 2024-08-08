@@ -18,8 +18,8 @@ public class LessonAMenu implements MenuA {
     public void game() {
         while (true) {
             menu();
-            int select = getIntegerFromTo(1);
-            if (select == 10) {
+            int select = getIntegerFromTo(0);
+            if (select == 0) {
                 System.out.println("Выход из меню задач А.");
                 break;
             }
@@ -31,16 +31,16 @@ public class LessonAMenu implements MenuA {
     public void menu() {
         System.out.println("""
                 \tВведите номер задачи:
-                \t1
-                \t2
-                \t3
-                \t4
-                \t5
-                \t6
-                \t7
-                \t8
-                \t9
-                \t10 - выход.
+                \tN1
+                \tN2
+                \tN3
+                \tN4
+                \tN5
+                \tN6
+                \tN7
+                \tN8
+                \tN9
+                \t0 - выход.
                 """);
     }
 

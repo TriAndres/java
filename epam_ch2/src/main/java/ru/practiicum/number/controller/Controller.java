@@ -1,6 +1,8 @@
 package ru.practiicum.number.controller;
 
 public interface Controller {
+    void getInitNum();
+
     void getListNumbers();
 
     void save();
