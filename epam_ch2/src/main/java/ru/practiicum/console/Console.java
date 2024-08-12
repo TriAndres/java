@@ -22,6 +22,20 @@ public class Console {
         return a;
     }
 
+    public static double getDouble() {
+        double a = 0;
+        while (true) {
+            if (scanner.hasNextInt()) {
+                a = scanner.nextDouble();
+                break;
+            } else {
+                scanner.nextLine();
+                System.out.println("Введите цифру:");
+            }
+        }
+        return a;
+    }
+
     public static int getIntegerFromTo(int from) {
         int num = 0;
         while (true) {

@@ -1,7 +1,7 @@
-package ru.practiicum.lessonA.controller;
+package ru.practiicum.lessonA.controllerA;
 
-import ru.practiicum.file.File;
-import ru.practiicum.lessonA.model.*;
+import ru.practiicum.console.Console;
+import ru.practiicum.lessonA.modelA.*;
 import ru.practiicum.number.model.Number;
 import ru.practiicum.number.model.NumberManage;
 
@@ -9,15 +9,15 @@ import java.util.List;
 
 public class LessonAController {
     private final NumberManage numberManage;
-    private File f;
-    LessonA lessonA;
-    NumberSort numberSort;
+    private final MethodA lessonA;
+    private final NumberSort numberSort;
+    private final Equation equation;
 
     public LessonAController(NumberManage numberManage) {
         this.numberManage = numberManage;
-        f = new File();
-        lessonA = new LessonA();
+        lessonA = new MethodA();
         numberSort = new NumberSort();
+        equation = new Equation();
     }
 
 
@@ -116,7 +116,15 @@ public class LessonAController {
     public void lesson9() {
         System.out.println("9. Найти корни квадратного уравнения. Параметры уравнения передавать\n" +
                 "с командной строкой.");
-        System.out.println("Ввод:");
-        lessonA.showNum("1",10, numberManage.getListNumbers());
+
+        System.out.println("ax^2 + bx + c = 0");
+        System.out.println("Введите a:");
+        double a = Console.getDouble();
+        System.out.println("Введите b:");
+        double b = Console.getDouble();
+        System.out.println("Введите c:");
+        double c = Console.getDouble();
+        equation.setEquation(a, b, c);
+        equation.getEquationDecision();
     }
 }

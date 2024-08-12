@@ -1,4 +1,4 @@
-package ru.practiicum.lessonA.model;
+package ru.practiicum.lessonA.modelA;
 
 import ru.practiicum.number.model.Number;
 

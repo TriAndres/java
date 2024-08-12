@@ -1,7 +1,7 @@
 package ru.practiicum.number.controller;
 
 import ru.practiicum.file.File;
-import ru.practiicum.lessonA.model.LessonA;
+import ru.practiicum.lessonA.modelA.MethodA;
 import ru.practiicum.number.model.Number;
 import ru.practiicum.number.model.NumberManage;
 
@@ -14,12 +14,12 @@ public class NumberController implements Controller {
     private final NumberManage manageNumber;
     private final File f;
     private final String nameFile = "src\\main\\java\\ru\\practiicum\\file\\NumberFile.txt";
-    private final LessonA lessonA;
+    private final MethodA lessonA;
 
     public NumberController(NumberManage manageNumber) {
         this.manageNumber = manageNumber;
         f = new File();
-        lessonA = new LessonA();
+        lessonA = new MethodA();
     }
     @Override
     public void getInitNum() {

@@ -1,4 +1,4 @@
-package ru.practiicum.lessonA.model;
+package ru.practiicum.lessonA.modelA;
 
 import ru.practiicum.number.model.Number;
 
@@ -7,10 +7,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class LessonA {
+public class MethodA {
 
 
-    public LessonA() {
+    public MethodA() {
     }
 
     public void setNumLength(List<Number> list) {

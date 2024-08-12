@@ -1,7 +1,7 @@
 package ru.practiicum.view;
 
-import ru.practiicum.lessonA.controller.LessonAController;
-import ru.practiicum.lessonA.view.LessonAMenu;
+import ru.practiicum.lessonA.controllerA.LessonAController;
+import ru.practiicum.lessonA.viewA.LessonAMenu;
 import ru.practiicum.number.controller.NumberController;
 import ru.practiicum.number.model.NumberManage;
 import ru.practiicum.number.view.NumberMenu;
