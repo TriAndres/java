@@ -1,4 +1,4 @@
-package ru.practiicum.lessonA.modelA;
+package ru.practiicum.lessonA.lessonA.modelA;
 
 public class Equation {
     private double a;

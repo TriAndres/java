@@ -1,9 +1,9 @@
-package ru.practiicum.number.controller;
+package ru.practiicum.lessonA.number.controller;
 
 import ru.practiicum.file.File;
-import ru.practiicum.lessonA.modelA.MethodA;
-import ru.practiicum.number.model.Number;
-import ru.practiicum.number.model.NumberManage;
+import ru.practiicum.lessonA.lessonA.modelA.MethodA;
+import ru.practiicum.lessonA.number.model.Number;
+import ru.practiicum.lessonA.number.model.NumberManage;
 
 import java.util.ArrayList;
 

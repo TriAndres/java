@@ -1,6 +1,6 @@
-package ru.practiicum.number.view;
+package ru.practiicum.lessonA.number.view;
 
-import ru.practiicum.number.controller.NumberController;
+import ru.practiicum.lessonA.number.controller.NumberController;
 
 import static ru.practiicum.console.Console.getIntegerFromTo;
 

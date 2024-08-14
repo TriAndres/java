@@ -1,10 +1,10 @@
 package ru.practiicum.view;
 
-import ru.practiicum.lessonA.controllerA.LessonAController;
-import ru.practiicum.lessonA.viewA.LessonAMenu;
-import ru.practiicum.number.controller.NumberController;
-import ru.practiicum.number.model.NumberManage;
-import ru.practiicum.number.view.NumberMenu;
+import ru.practiicum.lessonA.lessonA.controllerA.LessonAController;
+import ru.practiicum.lessonA.lessonA.viewA.LessonAMenu;
+import ru.practiicum.lessonA.number.controller.NumberController;
+import ru.practiicum.lessonA.number.model.NumberManage;
+import ru.practiicum.lessonA.number.view.NumberMenu;
 
 import static ru.practiicum.console.Console.getIntegerFromTo;
 

@@ -1,4 +1,4 @@
-package ru.practiicum.number.model;
+package ru.practiicum.lessonA.number.model;
 
 public class Number {
     private Integer id;

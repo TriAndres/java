@@ -1,8 +1,8 @@
-package ru.practiicum.lessonA.viewA;
+package ru.practiicum.lessonA.lessonA.viewA;
 
 
-import ru.practiicum.lessonA.controllerA.LessonAController;
-import ru.practiicum.number.view.MenuA;
+import ru.practiicum.lessonA.lessonA.controllerA.LessonAController;
+import ru.practiicum.lessonA.number.view.MenuA;
 
 import static ru.practiicum.console.Console.getIntegerFromTo;
 

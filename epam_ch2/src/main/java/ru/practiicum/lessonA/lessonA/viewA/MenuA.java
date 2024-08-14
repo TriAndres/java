@@ -1,6 +1,6 @@
-package ru.practiicum.number.view;
+package ru.practiicum.lessonA.number.view;
 
-public interface MenuN {
+public interface MenuA {
     void game();
 
     void menu();

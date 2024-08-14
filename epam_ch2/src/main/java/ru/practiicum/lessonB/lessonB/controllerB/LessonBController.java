@@ -1,24 +1,24 @@
-package ru.practiicum.lessonB.controllerB;
+package ru.practiicum.lessonB.lessonB.controllerB;
 
-import ru.practiicum.lessonB.modelB.MethodB;
+import ru.practiicum.lessonB.number.NumberManage;
+import ru.practiicum.lessonB.lessonB.modelB.MethodB;
 
 public class LessonBController {
     private final MethodB methodB;
+    private final NumberManage numberManage;
 
     public LessonBController() {
         methodB = new MethodB();
+        numberManage = new NumberManage();
     }
 
     public static void main(String[] args) {
         LessonBController l = new LessonBController();
-        l.lesson1();
+        l.lesson3();
     }
     /*
 Вариант B
 
-2. Вывести элементы массива в обратном порядке.
-3. Определить принадлежность некоторого значения k интервалам (n, m], [n,
-m), (n, m), [n, m].
 4. Вывести на экран все числа от 1 до 100, которые делятся на 3 без остатка.
 5. Сколько значащих нулей в двоичной записи числа 129?
 6. В системе счисления с некоторым основанием десятичное число 81 запи
@@ -35,5 +35,18 @@ m), (n, m), [n, m].
         methodB.table(2,5);
         methodB.table(6,9);
 
+    }
+
+    public void lesson2() {
+        numberManage.initArray(100);
+        methodB.showListNumber(1,10, numberManage.getList());
+
+        System.out.println("\n2. Вывести элементы массива в обратном порядке.");
+        methodB.showListNumber(1,10, methodB.getListReverse(numberManage.getList()));
+    }
+
+    public void lesson3() {
+        System.out.println("3. Определить принадлежность некоторого значения k интервалам (n, m], [n,\n" +
+                "m), (n, m), [n, m].");
     }
 }

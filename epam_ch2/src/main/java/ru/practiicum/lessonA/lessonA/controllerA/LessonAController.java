@@ -1,9 +1,9 @@
-package ru.practiicum.lessonA.controllerA;
+package ru.practiicum.lessonA.lessonA.controllerA;
 
 import ru.practiicum.console.Console;
-import ru.practiicum.lessonA.modelA.*;
-import ru.practiicum.number.model.Number;
-import ru.practiicum.number.model.NumberManage;
+import ru.practiicum.lessonA.lessonA.modelA.*;
+import ru.practiicum.lessonA.number.model.Number;
+import ru.practiicum.lessonA.number.model.NumberManage;
 
 import java.util.List;
 

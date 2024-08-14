@@ -1,7 +1,6 @@
-package ru.practiicum.number.model;
+package ru.practiicum.lessonA.number.model;
 
 import java.util.Collection;
-import java.util.Random;
 
 public interface Manager {
     int getId();

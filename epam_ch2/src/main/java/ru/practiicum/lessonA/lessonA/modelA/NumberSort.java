@@ -1,6 +1,6 @@
-package ru.practiicum.lessonA.modelA;
+package ru.practiicum.lessonA.lessonA.modelA;
 
-import ru.practiicum.number.model.Number;
+import ru.practiicum.lessonA.number.model.Number;
 
 import java.util.List;
 

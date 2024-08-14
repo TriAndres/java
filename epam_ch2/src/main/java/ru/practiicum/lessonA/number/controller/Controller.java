@@ -1,4 +1,4 @@
-package ru.practiicum.number.controller;
+package ru.practiicum.lessonA.number.controller;
 
 public interface Controller {
     void getInitNum();
