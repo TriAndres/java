@@ -1,6 +1,6 @@
-package ru.practiicum.lessonB.view;
+package ru.yandex.practicum.view;
 
-import ru.practiicum.lessonB.controller.LessonControllerB;
+import ru.yandex.practicum.lessonB.controller.LessonControllerB;
 
 import java.util.Scanner;
 

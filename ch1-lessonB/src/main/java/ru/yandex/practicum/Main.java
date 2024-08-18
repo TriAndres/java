@@ -1,7 +1,9 @@
 package ru.yandex.practicum;
 
+import ru.yandex.practicum.view.LessonMenuB;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        new LessonMenuB().game();
     }
 }

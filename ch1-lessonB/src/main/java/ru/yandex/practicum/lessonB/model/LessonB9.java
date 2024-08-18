@@ -1,7 +1,7 @@
-package ru.practiicum.lessonB.model;
+package ru.yandex.practicum.lessonB.model;
 
-import ru.practiicum.number.ManageNumber;
-import ru.practiicum.number.Number;
+import ru.yandex.practicum.number.ManageNumber;
+import ru.yandex.practicum.number.Number;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,8 @@ import java.util.List;
 числа в интервале от 100000 до 999999
  */
 public class LessonB9 extends LessonB {
-    public LessonB9(ManageNumber number) {
-        super(number);
+    public LessonB9(ManageNumber manageNumber) {
+        super(manageNumber);
     }
 
     @Override
@@ -22,8 +22,8 @@ public class LessonB9 extends LessonB {
         System.out.println("9. Счастливые» числа.");
         numAllShow(20, 100000, 999999, 5);
         System.out.println("Счастливые» числа :");
-        number.show(5, numLucky(number.getNumberList()));
-        number.getNumberList().clear();
+        manageNumber.show(5, numLucky(manageNumber.getNumberList()));
+        manageNumber.getNumberList().clear();
     }
 
     public List<Number> numLucky(List<Number> numberList) {

@@ -1,6 +1,6 @@
-package ru.practiicum.lessonB.model;
+package ru.yandex.practicum.lessonB.model;
 
-import ru.practiicum.number.ManageNumber;
+import ru.yandex.practicum.number.ManageNumber;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,11 +19,11 @@ public class LessonB1 extends LessonB {
         evenNumbers();
         System.out.println("\nНечетные числа:");
         notEvenNumbers();
-        number.getNumberList().clear();
+        manageNumber.getNumberList().clear();
     }
 
     public void  evenNumbers() {
-        show(5,number.getNumberList().stream()
+        show(5, manageNumber.getNumberList().stream()
                 .filter(i -> i.getValue() % 2 == 0)
                 .map(i-> i.getValue())
                 .collect(Collectors.toList()));
@@ -31,7 +31,7 @@ public class LessonB1 extends LessonB {
     }
 
     public void  notEvenNumbers() {
-        show(5,number.getNumberList().stream()
+        show(5, manageNumber.getNumberList().stream()
                 .filter(i -> i.getValue() % 2 != 0)
                 .map(i-> i.getValue())
                 .collect(Collectors.toList()));

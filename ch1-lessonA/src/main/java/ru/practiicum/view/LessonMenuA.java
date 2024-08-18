@@ -1,4 +1,4 @@
-package ru.practiicum.lessonA.view;
+package ru.practiicum.view;
 
 import ru.practiicum.lessonA.controller.LessonControllerA;
 

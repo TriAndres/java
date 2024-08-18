@@ -1,9 +1,10 @@
 package ru.practiicum;
 
-import ru.practiicum.view.MainMenu;
+
+import ru.practiicum.view.LessonMenuA;
 
 public class Main {
     public static void main(String[] args) {
-        new MainMenu().run();
+        new LessonMenuA().game();
     }
 }

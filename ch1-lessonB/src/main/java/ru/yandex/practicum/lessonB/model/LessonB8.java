@@ -1,15 +1,15 @@
-package ru.practiicum.lessonB.model;
+package ru.yandex.practicum.lessonB.model;
 
-import ru.practiicum.number.ManageNumber;
-import ru.practiicum.number.Number;
+import ru.yandex.practicum.number.ManageNumber;
+import ru.yandex.practicum.number.Number;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class LessonB8 extends LessonB {
-    public LessonB8(ManageNumber number) {
-        super(number);
+    public LessonB8(ManageNumber manageNumber) {
+        super(manageNumber);
     }
 
     @Override
@@ -17,8 +17,8 @@ public class LessonB8 extends LessonB {
         System.out.println("8. Числа в порядке убывания частоты встречаемости чисел.");
         numAllShow(20, 1, 50, 5);
         System.out.println("Частоты встречаемости чисел:");
-        numSorted(number.getNumberList());
-        number.getNumberList().clear();
+        numSorted(manageNumber.getNumberList());
+        manageNumber.getNumberList().clear();
     }
 
     private void numSorted(List<Number> list) {

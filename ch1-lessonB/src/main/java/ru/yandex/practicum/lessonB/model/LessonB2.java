@@ -1,6 +1,7 @@
-package ru.practiicum.lessonB.model;
+package ru.yandex.practicum.lessonB.model;
 
-import ru.practiicum.number.ManageNumber;
+
+import ru.yandex.practicum.number.ManageNumber;
 
 public class LessonB2 extends LessonB {
     public LessonB2(ManageNumber number) {
@@ -13,11 +14,11 @@ public class LessonB2 extends LessonB {
         numAllShow(20, 1, 100, 5);
         System.out.println("Наибольшее число: " + max());
         System.out.println("Наименьшее число: " + min());
-        number.getNumberList().clear();
+        manageNumber.getNumberList().clear();
     }
 
     public Integer max() {
-        return number
+        return manageNumber
                 .getNumberList()
                 .stream().map(i-> i.getValue())
                 .max(Integer::compare)
@@ -25,7 +26,7 @@ public class LessonB2 extends LessonB {
     }
 
     public Integer min() {
-        return number
+        return manageNumber
                 .getNumberList()
                 .stream().map(i-> i.getValue())
                 .min(Integer::compare)

@@ -1,13 +1,13 @@
-package ru.practiicum.lessonB.model;
+package ru.yandex.practicum.lessonB.model;
 
-import ru.practiicum.number.ManageNumber;
-import ru.practiicum.number.Number;
+import ru.yandex.practicum.number.ManageNumber;
+import ru.yandex.practicum.number.Number;
 
 import java.util.List;
 
 public class LessonB7 extends LessonB {
-    public LessonB7(ManageNumber number) {
-        super(number);
+    public LessonB7(ManageNumber manageNumber) {
+        super(manageNumber);
     }
 
     @Override
@@ -15,15 +15,15 @@ public class LessonB7 extends LessonB {
         System.out.println("7. Отсортированные числа в порядке возрастания и убывания.");
         numAllShow(20, 1, 50, 5);
         System.out.println("Числа в порядке возрастания:");
-        number.show(5, numAscending());
+        manageNumber.show(5, numAscending());
         System.out.println("Числа в порядке убывания:");
-        number.show(5, numDecreasing());
-        number.getNumberList().clear();
+        manageNumber.show(5, numDecreasing());
+        manageNumber.getNumberList().clear();
 
     }
 
     public List<Number> numAscending() {
-        return number
+        return manageNumber
                 .getNumberList()
                 .stream()
                 .sorted((a, b) -> a.getValue() - b.getValue())
@@ -31,7 +31,7 @@ public class LessonB7 extends LessonB {
     }
 
     public List<Number> numDecreasing() {
-        return number
+        return manageNumber
                 .getNumberList()
                 .stream()
                 .sorted((a, b) -> b.getValue() - a.getValue())
