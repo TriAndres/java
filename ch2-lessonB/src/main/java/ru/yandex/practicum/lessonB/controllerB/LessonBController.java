@@ -3,6 +3,8 @@ package ru.yandex.practicum.lessonB.controllerB;
 import ru.yandex.practicum.lessonB.modelB.MethodB;
 import ru.yandex.practicum.lessonB.modelB.number.NumberManage;
 
+import java.util.Random;
+
 
 public class LessonBController {
     private final MethodB methodB;
@@ -13,10 +15,10 @@ public class LessonBController {
         numberManage = new NumberManage();
     }
 
-    public static void main(String[] args) {
-        LessonBController l = new LessonBController();
-        l.lesson3();
-    }
+//    public static void main(String[] args) {
+//        LessonBController l = new LessonBController();
+//        l.lesson3();
+//    }
     /*
 Вариант B
 
@@ -47,7 +49,68 @@ public class LessonBController {
     }
 
     public void lesson3() {
-        System.out.println("3. Определить принадлежность некоторого значения k интервалам (n, m], [n,\n" +
-                "m), (n, m), [n, m].");
+        System.out.println("3. Определить принадлежность некоторого значения k интервалам (n, m], [n, m), (n, m), [n, m].");
+        /*
+        Круглые скобки (, ) обозначают, что граничное значение не включается в интервал
+        Квадратные скобки [, ] обозначают, что граничное значение включается в интервал
+        ∈ -пренадлежит
+        x ∈ (m, n) ⇔ m < x < n
+        x ∈ [m, n) ⇔ m ≤ x < n
+        x ∈ (m, n] ⇔ m < x ≤ n
+        x ∈ [m, n] ⇔ m ≤ x ≤ n
+
+        public class Range
+{
+    private int low;
+    private int high;
+
+    public Range(int low, int high){
+        this.low = low;
+        this.high = high;
+    }
+
+    public boolean contains(int number){
+        return (number >= low && number <= high);
+    }
+}
+
+
+
+        x > 25 && x < 100 = алг. диапазон (25, 100)
+        x >= 25 && x < 100 = алг. диапазон [25, 100)
+        x >= 25 && x =< 100 = алг. диапазон [25, 100]
+         x > 25 && x =< 100 = алг. диапазон (25, 100]
+
+         public static int randomNumber(int min, int max) {
+         return min + (new Random()).nextInt(max-min);
+}
+         */
+    }
+
+    public static void main(String[] args) {
+
+        for (int i = 0; i < 20; i++) {
+            if (i > 3 && i < 10) {
+                System.out.print(i + " ");
+            } else {
+                System.out.print("." + " ");
+            }
+        }
+        System.out.println();
+        limit();
+        System.out.println();
+        limit();
+    }
+    public static int randomNumber(int min, int max) {
+        return min + (new Random()).nextInt(max-min);
+    }
+    public static void limit() {
+        for (int i = 0; i < 20; i++) {
+            if (i > 0 && i < 10) {
+                System.out.print(i + " ");
+            } else {
+                System.out.print("." + " ");
+            }
+        }
     }
 }
