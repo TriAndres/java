@@ -1,6 +1,7 @@
-package ru.yandex.practicum.lessonB.controller;
+package ru.yandex.practicum.controller;
 
 import ru.yandex.practicum.lessonB.model.*;
+import ru.yandex.practicum.model.*;
 import ru.yandex.practicum.number.ManageNumber;
 
 public class LessonControllerB {

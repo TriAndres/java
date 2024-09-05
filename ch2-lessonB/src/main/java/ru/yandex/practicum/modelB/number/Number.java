@@ -1,4 +1,4 @@
-package ru.yandex.practicum.lessonB.modelB.number;
+package ru.yandex.practicum.modelB.number;
 
 public class Number {
     private int id;

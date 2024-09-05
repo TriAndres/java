@@ -1,38 +1,28 @@
-package ru.yandex.practicum.lessonB.controllerB;
+package ru.yandex.practicum.controllerB;
 
-import ru.yandex.practicum.lessonB.modelB.MethodB;
-import ru.yandex.practicum.lessonB.modelB.number.NumberManage;
+import ru.yandex.practicum.modelB.MethodB;
+import ru.yandex.practicum.modelB.interval.Interval;
+import ru.yandex.practicum.modelB.number.NumberManage;
 
 import java.util.Random;
+import java.util.function.Predicate;
 
 
 public class LessonBController {
     private final MethodB methodB;
     private final NumberManage numberManage;
+    private Interval interval;
 
     public LessonBController() {
         methodB = new MethodB();
         numberManage = new NumberManage();
     }
 
-//    public static void main(String[] args) {
-//        LessonBController l = new LessonBController();
-//        l.lesson3();
-//    }
-    /*
-Вариант B
+    public static void main(String[] args) {
+        LessonBController l = new LessonBController();
+        l.lesson7();
+    }
 
-4. Вывести на экран все числа от 1 до 100, которые делятся на 3 без остатка.
-5. Сколько значащих нулей в двоичной записи числа 129?
-6. В системе счисления с некоторым основанием десятичное число 81 запи
-сывается в виде 100. Найти это основание.
-7. Написать код программы, которая бы переводила числа из десятичной сис
-темы счисления в любую другую.
-8. Написать код программы, которая бы переводила числа одной любой сис
-темы счисления в любую другую.
-9. Ввести число от 1 до 12. Вывести на консоль название месяца, соответствую
-щего данному числу. Осуществить проверку корректности ввода чисел.
-     */
     public void lesson1() {
         System.out.println("1. Вывести на экран таблицу умножения.");
         methodB.table(2,5);
@@ -50,67 +40,51 @@ public class LessonBController {
 
     public void lesson3() {
         System.out.println("3. Определить принадлежность некоторого значения k интервалам (n, m], [n, m), (n, m), [n, m].");
-        /*
-        Круглые скобки (, ) обозначают, что граничное значение не включается в интервал
-        Квадратные скобки [, ] обозначают, что граничное значение включается в интервал
-        ∈ -пренадлежит
-        x ∈ (m, n) ⇔ m < x < n
-        x ∈ [m, n) ⇔ m ≤ x < n
-        x ∈ (m, n] ⇔ m < x ≤ n
-        x ∈ [m, n] ⇔ m ≤ x ≤ n
-
-        public class Range
-{
-    private int low;
-    private int high;
-
-    public Range(int low, int high){
-        this.low = low;
-        this.high = high;
+        System.out.println("Круглые скобки (, ) обозначают, что граничное значение не включается в интервал\n" +
+                "Квадратные скобки [, ] обозначают, что граничное значение включается в интервал");
+        interval = new Interval(10, 3, 7);
+        System.out.println("\nx ∈ (m, n] ⇔ m < x < n");
+        interval.showValues("(n,m]");
+        System.out.println("\n\nx ∈ [m, n) ⇔ m < x < n");
+        interval.showValues("[n,m)");
+        System.out.println("\n\nx ∈ (m, n) ⇔ m < x < n");
+        interval.showValues("(n,m)");
+        System.out.println("\n\nx ∈ [n, m] ⇔ m < x < n");
+        interval.showValues("[n,m]");
     }
 
-    public boolean contains(int number){
-        return (number >= low && number <= high);
-    }
-}
-
-
-
-        x > 25 && x < 100 = алг. диапазон (25, 100)
-        x >= 25 && x < 100 = алг. диапазон [25, 100)
-        x >= 25 && x =< 100 = алг. диапазон [25, 100]
-         x > 25 && x =< 100 = алг. диапазон (25, 100]
-
-         public static int randomNumber(int min, int max) {
-         return min + (new Random()).nextInt(max-min);
-}
-         */
+    public void lesson4() {
+        System.out.println("4. Вывести на экран все числа от 1 до 100, которые делятся на 3 без остатка.");
+        methodB.devOnNum(10, i -> i % 3 == 0);
     }
 
-    public static void main(String[] args) {
+    public void lesson5() {
+        System.out.println("5. Сколько значащих нулей в двоичной записи числа 129?");
+        System.out.println(methodB.significantZeros(129));
+    }
 
-        for (int i = 0; i < 20; i++) {
-            if (i > 3 && i < 10) {
-                System.out.print(i + " ");
-            } else {
-                System.out.print("." + " ");
-            }
-        }
-        System.out.println();
-        limit();
-        System.out.println();
-        limit();
+    public void lesson6() {
+        System.out.println("6. В системе счисления с некоторым основанием десятичное число 81 \n" +
+                "записывается в виде 100. Найти это основание.");
+        System.out.println("0*9^0+0*9^1+1*9^2=81;\n" +
+                "100(9);\n" +
+                "Основание 9.");
     }
-    public static int randomNumber(int min, int max) {
-        return min + (new Random()).nextInt(max-min);
+
+    public void lesson7() {
+        System.out.println("7. Написать код программы, которая бы переводила числа из десятичной системы \n" +
+                "счисления в любую другую.");
+        methodB.translatedNumbersFromTheDecimalSystem(150, 16);
     }
-    public static void limit() {
-        for (int i = 0; i < 20; i++) {
-            if (i > 0 && i < 10) {
-                System.out.print(i + " ");
-            } else {
-                System.out.print("." + " ");
-            }
-        }
+
+    public void lesson8() {
+        System.out.println("8. Написать код программы, которая бы переводила числа одной любой\n" +
+                " системы счисления в любую другую.");
     }
+
+    public void lesson9() {
+        System.out.println("9. Ввести число от 1 до 12. Вывести на консоль название месяца, \n" +
+                "соответствующего данному числу. Осуществить проверку корректности ввода чисел.");
+    }
+
 }

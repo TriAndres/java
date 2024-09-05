@@ -1,4 +1,4 @@
-package ru.yandex.practicum.lessonB.model;
+package ru.yandex.practicum.model;
 
 
 import ru.yandex.practicum.number.ManageNumber;
