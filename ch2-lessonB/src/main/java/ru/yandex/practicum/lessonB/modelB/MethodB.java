@@ -1,6 +1,6 @@
-package ru.yandex.practicum.modelB;
+package ru.yandex.practicum.lessonB.modelB;
 
-import ru.yandex.practicum.modelB.number.Number;
+import ru.yandex.practicum.lessonB.modelB.number.Number;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ru.yandex.practicum.modelB.interval;
+package ru.yandex.practicum.lessonB.modelB.interval;
 
 public class Interval {
     private final int length;

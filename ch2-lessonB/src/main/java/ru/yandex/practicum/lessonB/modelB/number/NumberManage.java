@@ -1,4 +1,4 @@
-package ru.yandex.practicum.modelB.number;
+package ru.yandex.practicum.lessonB.modelB.number;
 
 import java.util.ArrayList;
 import java.util.List;

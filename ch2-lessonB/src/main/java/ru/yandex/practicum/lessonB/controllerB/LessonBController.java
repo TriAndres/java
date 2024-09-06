@@ -1,12 +1,10 @@
-package ru.yandex.practicum.controllerB;
+package ru.yandex.practicum.lessonB.controllerB;
 
-import ru.yandex.practicum.modelB.MethodB;
-import ru.yandex.practicum.modelB.interval.Interval;
-import ru.yandex.practicum.modelB.number.NumberManage;
+import ru.yandex.practicum.lessonB.modelB.MethodB;
+import ru.yandex.practicum.lessonB.modelB.interval.Interval;
+import ru.yandex.practicum.lessonB.modelB.number.NumberManage;
 
-import java.util.Random;
-import java.util.function.Predicate;
-
+import static ru.yandex.practicum.console.Console.getInteger;
 
 public class LessonBController {
     private final MethodB methodB;
@@ -32,6 +30,7 @@ public class LessonBController {
 
     public void lesson2() {
         numberManage.initArray(100);
+        System.out.println("Ввод:");
         methodB.showListNumber(1,10, numberManage.getList());
 
         System.out.println("\n2. Вывести элементы массива в обратном порядке.");
@@ -74,7 +73,11 @@ public class LessonBController {
     public void lesson7() {
         System.out.println("7. Написать код программы, которая бы переводила числа из десятичной системы \n" +
                 "счисления в любую другую.");
-        methodB.translatedNumbersFromTheDecimalSystem(150, 16);
+        System.out.println("Введите число в десятичной системе: к примеру 129");
+        int number = getInteger(0);
+        System.out.println("В какую систему преобразовать: 2, 8, 16 или в любую другую.");
+        int system = getInteger(0);
+        methodB.translatedNumbersFromTheDecimalSystem(number, system);
     }
 
     public void lesson8() {
