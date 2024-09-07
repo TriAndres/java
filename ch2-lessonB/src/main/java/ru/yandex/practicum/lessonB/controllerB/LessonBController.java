@@ -6,6 +6,7 @@ import ru.yandex.practicum.lessonB.modelB.number.NumberManage;
 
 import static ru.yandex.practicum.console.Console.getInteger;
 
+
 public class LessonBController {
     private final MethodB methodB;
     private final NumberManage numberManage;
@@ -18,7 +19,7 @@ public class LessonBController {
 
     public static void main(String[] args) {
         LessonBController l = new LessonBController();
-        l.lesson7();
+        l.lesson9();
     }
 
     public void lesson1() {
@@ -83,11 +84,18 @@ public class LessonBController {
     public void lesson8() {
         System.out.println("8. Написать код программы, которая бы переводила числа одной любой\n" +
                 " системы счисления в любую другую.");
+        System.out.print("Введите число для конвертирования: ");
+        int number = getInteger(0);
+        System.out.print("Выберите основание новой системы счисления: ");
+        int system = getInteger(1);
+        System.out.println(Integer.toString(number, system));
     }
 
     public void lesson9() {
         System.out.println("9. Ввести число от 1 до 12. Вывести на консоль название месяца, \n" +
                 "соответствующего данному числу. Осуществить проверку корректности ввода чисел.");
+        System.out.println("Введите число месяца 1 до 12");
+        int month = getInteger(0);
+        methodB.month(month);
     }
-
 }
