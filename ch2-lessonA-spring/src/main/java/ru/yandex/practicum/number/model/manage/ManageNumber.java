@@ -1,6 +1,6 @@
 package ru.yandex.practicum.number.model.manage;
 
-import ru.yandex.practicum.number.model.Number;
+import ru.yandex.practicum.number.model.Numbers;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -8,44 +8,30 @@ import java.util.List;
 import java.util.Map;
 
 public class ManageNumber implements Manage{
-    private final Map<Long, Number> numbers = new HashMap<>();
+    private final Map<Long, Numbers> numbersMap = new HashMap<>();
 
     @Override
-    public Collection<Number> findAll() {
+    public Collection<Numbers> findAll() {
         return List.of();
     }
 
     @Override
-    public Number create(Number number) {
-        return null;
+    public Numbers save(Numbers numbers) {
+        return numbersMap.put(numbers.getId(), numbers);
     }
 
     @Override
-    public Number update(Number number) {
-        return null;
+    public Numbers findById(Long id) {
+        return numbersMap.get(id);
     }
 
     @Override
-    public Long findById(Long id) {
-        return 0l;
-    }
-
-    @Override
-    public void deleteById(Long id) {
-
+    public Numbers deleteById(Long id) {
+        return numbersMap.get(id);
     }
 
     @Override
     public void clear() {
-
-    }
-
-    public Long getNextId() {
-        Long maxId = numbers.keySet()
-                .stream()
-                .mapToLong(id -> id)
-                .max()
-                .orElse(0);
-        return maxId;
+        numbersMap.clear();
     }
 }
